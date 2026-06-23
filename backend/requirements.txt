@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+pymongo
+passlib[bcrypt]
+itsdangerous
+tensorflow
+pillow
+reportlab
+numpy
+opencv-python
+scikit-learn
+joblib

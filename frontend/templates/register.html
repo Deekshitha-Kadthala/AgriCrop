@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AgriCrop Register</title>
+
+    <link rel="stylesheet"
+          href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="login-card">
+
+        <h1>🌿 AgriCrop</h1>
+
+        <h3>Farmer Registration</h3>
+
+        <!-- Display Error/Success Message -->
+        {% if message %}
+        <div class="alert">
+            {{ message }}
+        </div>
+        {% endif %}
+
+        <form action="/register"
+              method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required>
+
+            <input
+                type="password"
+                name="confirm_password"
+                placeholder="Confirm Password"
+                required>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <p>
+            Already have an account?
+
+            <a href="/">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+
+</html>

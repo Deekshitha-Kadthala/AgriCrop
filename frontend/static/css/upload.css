@@ -1,0 +1,79 @@
+/* upload.css */
+
+/* Full page background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef") 
+    no-repeat center center fixed;
+
+    background-size: cover;
+    color: #ffffff;
+}
+
+/* Center container */
+.upload-container {
+    width: 420px;
+    margin: 80px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(12px);
+
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+
+    text-align: center;
+}
+
+/* Title */
+.upload-container h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+/* File input */
+.upload-container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+
+    background: #ffffff;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Upload button */
+.upload-container button {
+    width: 100%;
+    padding: 12px;
+
+    background: #2ecc71;
+    border: none;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.upload-container button:hover {
+    background: #27ae60;
+    transform: scale(1.03);
+}
+
+/* Small text */
+.upload-container p {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 10px;
+}

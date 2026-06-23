@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Prediction Reports</title>
+
+    <link rel="stylesheet" href="/static/css/report.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Prediction History</h1>
+
+{% if reports %}
+
+<table>
+
+<tr>
+
+<th>Date</th>
+
+<th>Disease</th>
+
+<th>Confidence</th>
+
+<th>Image</th>
+
+</tr>
+
+{% for report in reports %}
+
+<tr>
+
+<td>{{ report.uploaded_at.strftime("%d-%m-%Y %H:%M") }}</td>
+
+<td>{{ report.prediction.disease }}</td>
+
+<td>{{ report.prediction.confidence }}%</td>
+
+<td>{{ report.image }}</td>
+
+</tr>
+
+<tr>
+
+<td colspan="4">
+
+<b>Description:</b>
+
+{{ report.recommendation.description }}
+
+<br><br>
+
+<b>Treatment:</b>
+
+{{ report.recommendation.treatment }}
+
+<br><br>
+
+<b>Fertilizer:</b>
+
+{{ report.recommendation.fertilizer }}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% else %}
+
+<h2>No reports available.</h2>
+
+{% endif %}
+
+<br>
+
+<a href="/dashboard">
+
+<button>Dashboard</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

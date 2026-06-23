@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#dff6dd,#c6f6d5);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+}
+
+.container{
+
+    width:100%;
+
+    max-width:900px;
+
+    display:flex;
+
+    gap:30px;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    flex-wrap:wrap;
+}
+
+.card{
+
+    background:white;
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.card h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#2d6a4f;
+
+    font-size:30px;
+
+    font-weight:700;
+}
+
+.input-group{
+
+    margin-bottom:22px;
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#444;
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    transition:.3s;
+}
+
+.input-group input:focus{
+
+    border-color:#2d6a4f;
+
+    outline:none;
+
+    box-shadow:0 0 10px rgba(45,106,79,.3);
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2d6a4f;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#1b4332;
+}
+
+.result-card{
+
+    width:320px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.result-card h2{
+
+    color:#2d6a4f;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+}
+
+.result{
+
+    background:#e9f8ec;
+
+    border-radius:15px;
+
+    padding:25px;
+}
+
+.result h3{
+
+    font-size:48px;
+
+    color:#2d6a4f;
+
+    margin-bottom:10px;
+}
+
+.result p{
+
+    font-size:18px;
+
+    color:#444;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Moisture Result</title>
+
+<link rel="stylesheet"
+href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="login-card">
+
+<h2>Prediction Result</h2>
+
+<p><b>Crop :</b> {{ result.crop }}</p>
+
+<p><b>Moisture :</b> {{ result.moisture }}</p>
+
+<p><b>Level :</b> {{ result.level }}</p>
+
+<p><b>Recommendation :</b> {{ result.advice }}</p>
+
+<a href="/dashboard">
+
+<button>
+
+Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+</body>
+
+</html>

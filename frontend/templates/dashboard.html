@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriCrop Dashboard</title>
+
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>🌿 AGRICROP</h2>
+
+    <p class="user-name">
+        👤 {{ user.name }}
+    </p>
+
+    <hr>
+
+    <a href="/dashboard">🏠 Dashboard</a>
+    <a href="/upload">🌱 Upload Leaf</a>
+    <a href="/moisture">💧 Soil Moisture</a>
+    <a href="/report">📄 Reports</a>
+    <a href="/map">🗺 Disease Map</a>
+    <a href="/logout">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+    <h1>Welcome, {{ user.name }}</h1>
+
+    <p class="subtitle">
+        AI Powered Crop Disease Detection System
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>{{ total }}</h2>
+            <p>Total Predictions</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ healthy }}</h2>
+            <p>Healthy Crops</p>
+        </div>
+
+        <div class="card">
+            <h2>{{ diseased }}</h2>
+            <p>Diseased Crops</p>
+        </div>
+
+    </div>
+
+    <div class="chart-container">
+
+        <h2>Disease Statistics</h2>
+
+        <canvas id="diseaseChart"></canvas>
+
+        <!-- Hidden data for JavaScript -->
+        <div id="chart-data"
+             data-labels='{{ disease_labels | tojson }}'
+             data-values='{{ disease_values | tojson }}'>
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <h2>Recent Predictions</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Image</th>
+
+                    <th>Disease</th>
+
+                    <th>Confidence</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% if predictions %}
+
+                {% for item in predictions %}
+
+                <tr>
+
+                    <td>{{ item.image }}</td>
+
+                    <td>{{ item.prediction.disease }}</td>
+
+                    <td>{{ item.prediction.confidence }}%</td>
+
+                </tr>
+
+                {% endfor %}
+
+            {% else %}
+
+                <tr>
+
+                    <td colspan="3">
+                        No predictions available.
+                    </td>
+
+                </tr>
+
+            {% endif %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="/static/js/dashboard.js"></script>
+
+</body>
+
+</html>
